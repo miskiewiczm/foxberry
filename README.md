@@ -177,6 +177,8 @@ logo/          the fox
 
 Foxberry builds on [Nord](https://www.nordtheme.com) by Arctic Ice Studio and on several community ports. See [CREDITS.md](CREDITS.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
+Built with [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant. The palette, the role rule and every visual decision are the author's; Claude Code did a large part of the implementation: the generators that map dark themes to light ones by role, the contrast calculations, the per-app ports and the showcase page. Every color was reviewed by eye in daily use.
+
 ## License
 
 MIT, see [LICENSE](LICENSE). Third-party parts keep their own notices (see THIRD_PARTY_NOTICES.md).
