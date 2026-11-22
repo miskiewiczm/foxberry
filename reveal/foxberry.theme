@@ -1,0 +1,151 @@
+{
+  "_comments": [
+    "Foxberry, based on the Nord theme from KDE syntax-highlighting (MIT)."
+  ],
+  "metadata": {
+    "copyright": [
+      "SPDX-FileCopyrightText: 2016 Arctic Ice Studio <development@arcticicestudio.com>",
+      "SPDX-FileCopyrightText: 2016 Sven Greb <development@svengreb.de>",
+      "SPDX-FileCopyrightText: 2020 Nibaldo González <nibgonz@gmail.com>"
+    ],
+    "license": "SPDX-License-Identifier: MIT",
+    "name": "Foxberry",
+    "revision": 2
+  },
+  "background-color": "#E5E9F0",
+  "text-styles": {
+    "Alert": {
+      "background-color": "#DFE3EA",
+      "bold": true,
+      "selected-text-color": "#BE525A",
+      "text-color": "#BE525A"
+    },
+    "Annotation": {
+      "selected-text-color": "#B15E37",
+      "text-color": "#B15E37"
+    },
+    "Attribute": {
+      "selected-text-color": "#36816F",
+      "text-color": "#36816F"
+    },
+    "BaseN": {
+      "selected-text-color": "#986393",
+      "text-color": "#986393"
+    },
+    "BuiltIn": {
+      "italic": true,
+      "selected-text-color": "#287F92",
+      "text-color": "#287F92"
+    },
+    "Char": {
+      "selected-text-color": "#967044",
+      "text-color": "#967044"
+    },
+    "Comment": {
+      "selected-text-color": "#6A7488",
+      "text-color": "#6A7488"
+    },
+    "CommentVar": {
+      "selected-text-color": "#3B4252",
+      "text-color": "#3B4252"
+    },
+    "Constant": {
+      "bold": true,
+      "selected-text-color": "#2E3440",
+      "text-color": "#2E3440"
+    },
+    "ControlFlow": {
+      "bold": true,
+      "selected-text-color": "#5374B3",
+      "text-color": "#5374B3"
+    },
+    "DataType": {
+      "selected-text-color": "#5374B3",
+      "text-color": "#5374B3"
+    },
+    "DecVal": {
+      "selected-text-color": "#986393",
+      "text-color": "#986393"
+    },
+    "Documentation": {
+      "selected-text-color": "#3F79A8",
+      "text-color": "#3F79A8"
+    },
+    "Error": {
+      "selected-text-color": "#BE525A",
+      "text-color": "#BE525A",
+      "underline": true
+    },
+    "Extension": {
+      "bold": true,
+      "selected-text-color": "#36816F",
+      "text-color": "#36816F"
+    },
+    "Float": {
+      "selected-text-color": "#986393",
+      "text-color": "#986393"
+    },
+    "Function": {
+      "selected-text-color": "#287F92",
+      "text-color": "#287F92"
+    },
+    "Import": {
+      "selected-text-color": "#4E8044",
+      "text-color": "#4E8044"
+    },
+    "Information": {
+      "selected-text-color": "#967044",
+      "text-color": "#967044"
+    },
+    "Keyword": {
+      "bold": true,
+      "selected-text-color": "#5374B3",
+      "text-color": "#5374B3"
+    },
+    "Normal": {
+      "selected-text-color": "#3B4252",
+      "text-color": "#3B4252"
+    },
+    "Operator": {
+      "selected-text-color": "#5374B3",
+      "text-color": "#5374B3"
+    },
+    "Others": {
+      "selected-text-color": "#36816F",
+      "text-color": "#36816F"
+    },
+    "Preprocessor": {
+      "selected-text-color": "#3F79A8",
+      "text-color": "#3F79A8"
+    },
+    "RegionMarker": {
+      "background-color": "#DFE3EA",
+      "selected-text-color": "#287F92",
+      "text-color": "#287F92"
+    },
+    "SpecialChar": {
+      "selected-text-color": "#967044",
+      "text-color": "#967044"
+    },
+    "SpecialString": {
+      "selected-text-color": "#B15E37",
+      "text-color": "#B15E37"
+    },
+    "String": {
+      "selected-text-color": "#4E8044",
+      "text-color": "#4E8044"
+    },
+    "Variable": {
+      "selected-text-color": "#3F79A8",
+      "text-color": "#3F79A8"
+    },
+    "VerbatimString": {
+      "selected-text-color": "#4E8044",
+      "text-color": "#4E8044"
+    },
+    "Warning": {
+      "selected-text-color": "#BE525A",
+      "text-color": "#BE525A"
+    }
+  }
+}

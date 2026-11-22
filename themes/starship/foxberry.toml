@@ -1,0 +1,121 @@
+# Foxberry prompt for Starship.
+# Part of Foxberry, a light Nord theme. MIT license; see LICENSE and THIRD_PARTY_NOTICES.md.
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# timeout for custom modules (ms); the default 500 can be too short for a cold osascript after login
+command_timeout = 2000
+
+# a blank line before the prompt
+add_newline = true 
+
+palette = 'foxberry'
+
+
+format = """
+[ ⌘ ](bg:os_bg fg:os_fg)\
+[](bg:dir_bg fg:os_bg)\
+$directory\
+[](fg:dir_bg bg:git_bg)\
+$git_branch\
+$git_status\
+[](fg:git_bg bg:lang_bg)\
+$nodejs\
+$bun\
+$rust\
+$golang\
+$php\
+$python\
+$conda\
+[](fg:lang_bg)\
+$fill\
+${custom.clock}\
+\n $character"""
+
+[fill]
+symbol = " "
+
+[directory]
+style = "fg:dir_fg bg:dir_bg bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:git_bg"
+format = '[[ $symbol $branch ](fg:git_fg bg:git_bg)]($style)'
+
+[git_status]
+style = "bg:git_bg"
+format = '[[($all_status$ahead_behind )](fg:git_fg bg:git_bg)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol ($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol ($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol ($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol ($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[php]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol ($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[custom.spotify]
+# track now playing in Spotify (AppleScript; pgrep avoids launching the app)
+command = "pgrep -x Spotify >/dev/null || exit 0; osascript -e 'tell application \"Spotify\"' -e 'set stx to player state as string' -e 'if stx is \"stopped\" then return \"  \"' -e 'set trk to artist of current track & \" - \" & name of current track' -e 'if stx is \"playing\" then' -e 'return \"   \" & trk' -e 'else if stx is \"paused\" then' -e 'return \"   \" & trk' -e 'end if' -e 'end tell' 2>/dev/null"
+when = "pgrep -x Spotify"
+shell = ["sh"]
+style = ""
+format = '[$output ](fg:spotify)'
+
+[custom.clock]
+# the clock face icon shows the current full hour (nf-md-clock_time_*)
+command = "h=$(date +%l | tr -d ' '); case $h in 1) i=󱑋;; 2) i=󱑌;; 3) i=󱑍;; 4) i=󱑎;; 5) i=󱑏;; 6) i=󱑐;; 7) i=󱑑;; 8) i=󱑒;; 9) i=󱑓;; 10) i=󱑔;; 11) i=󱑕;; 12) i=󱑖;; esac; printf '%s %s' $i $(date +%R)"
+when = true
+shell = ["sh"]
+style = ""
+format = '[ $output ](fg:clock)'
+
+[python]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[conda]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[ $symbol$environment ](fg:lang_fg bg:lang_bg)]($style)'
+ignore_base = false
+
+[palettes.foxberry]
+os_bg = "#4c566a"
+os_fg = "#eceff4"
+dir_bg = "#a7bdd4"
+dir_fg = "#2e3440"
+git_bg = "#bcc4d2"
+git_fg = "#3b4252"
+lang_bg = "#d1d6e0"
+lang_fg = "#3f79a8"
+clock = "#4c566a"
+spotify = "#4e8044"

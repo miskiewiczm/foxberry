@@ -1,0 +1,213 @@
+/*-- scss:defaults --*/
+// Foxberry for Reveal.js (Quarto). Generated from the Foxberry palette.
+// Override in a separate file: theme: [foxberry.scss, custom.scss]
+
+// Surfaces and text
+$fb-bg: #ECEFF4 !default;
+$fb-surface: #E5E9F0 !default;
+$fb-surface-2: #DFE3EA !default;
+$fb-frame: #D1D6E0 !default;
+$fb-border: #C8CEDA !default;
+$fb-text: #2E3440 !default;
+$fb-text-2: #3B4252 !default;
+$fb-muted: #6A7488 !default;
+$fb-inverse-bg: #3B4252 !default;
+$fb-inverse-text: #ECEFF4 !default;
+$fb-on-badge: #2E3440 !default;
+
+// Accents: $fb-X (text/icon), $fb-X-bright (bar, marker), $fb-X-badge (background with dark text)
+$fb-frost: #36816F !default;
+$fb-frost-bright: #489784 !default;
+$fb-frost-badge: #B6D3D2 !default;
+$fb-cyan: #287F92 !default;
+$fb-cyan-bright: #3B95A9 !default;
+$fb-cyan-badge: #ACD3DE !default;
+$fb-blue: #5374B3 !default;
+$fb-blue-bright: #658ACD !default;
+$fb-blue-badge: #A7BDD4 !default;
+$fb-deep: #3F79A8 !default;
+$fb-deep-bright: #3F79A8 !default;
+$fb-deep-badge: #96ADC9 !default;
+$fb-red: #BE525A !default;
+$fb-red-bright: #DA656D !default;
+$fb-red-badge: #D5989E !default;
+$fb-orange: #B15E37 !default;
+$fb-orange-bright: #CC7248 !default;
+$fb-orange-badge: #DEAB9B !default;
+$fb-yellow: #967044 !default;
+$fb-yellow-bright: #AD8455 !default;
+$fb-yellow-badge: #E5C4A1 !default;
+$fb-green: #4E8044 !default;
+$fb-green-bright: #619756 !default;
+$fb-green-badge: #AAC396 !default;
+$fb-purple: #986393 !default;
+$fb-purple-bright: #B077AB !default;
+$fb-purple-badge: #CAB0C6 !default;
+$fb-fox: #A35E75 !default;
+$fb-fox-bright: #BC7890 !default;
+$fb-fox-badge: #DEC0CC !default;
+
+// Semantic roles
+$fb-accent: $fb-blue !default;          // main accent: links, h2 underlines, bullets
+$fb-accent-bright: $fb-blue-bright !default;
+$fb-brand: $fb-fox !default;            // Foxberry brand: title slide, highlights
+$fb-brand-bright: $fb-fox-bright !default;
+$fb-band-mix: 45% !default;  // how much badge color goes into band backgrounds
+
+// Typography (local fonts, with fallbacks)
+$fb-font-sans: "Fira Sans", "Inter", "Helvetica Neue", Arial, sans-serif !default;
+$fb-font-mono: "Iosevka SS04", "Iosevka SS02", "Iosevka", "JetBrains Mono", Menlo, monospace !default;
+
+// Quarto/Reveal variables
+$body-bg: $fb-bg;
+$body-color: $fb-text;
+$link-color: $fb-accent;
+$selection-bg: $fb-blue-badge;
+$font-family-sans-serif: $fb-font-sans;
+$font-family-monospace: $fb-font-mono;
+$presentation-font-size-root: 30px;
+$presentation-heading-color: $fb-text;
+$presentation-heading-font-weight: 700;
+$code-block-bg: $fb-surface;
+$code-block-border-color: $fb-border;
+$code-color: $fb-text;
+$code-bg: $fb-surface;
+
+// Callouts
+$callout-color-note: $fb-blue-bright;
+$callout-color-tip: $fb-green-bright;
+$callout-color-warning: $fb-yellow-bright;
+$callout-color-caution: $fb-orange-bright;
+$callout-color-important: $fb-red-bright;
+
+// Mermaid
+$mermaid-bg-color: $fb-bg;
+$mermaid-fg-color: $fb-text;
+$mermaid-fg-color--lighter: $fb-text-2;
+$mermaid-fg-color--lightest: $fb-muted;
+$mermaid-node-bg-color: $fb-surface;
+$mermaid-node-fg-color: $fb-text;
+$mermaid-edge-color: $fb-accent;
+$mermaid-label-bg-color: $fb-bg;
+$mermaid-label-fg-color: $fb-text;
+$mermaid-font-family: $fb-font-sans;
+
+/*-- scss:rules --*/
+// ── Basics ──────────────────────────────────────────────────────────────────
+.reveal-viewport { background-color: $fb-bg; }
+.reveal .slides { text-align: left; }
+.reveal p, .reveal li { line-height: 1.38; }
+.reveal li { margin-bottom: .4em; }
+.reveal li::marker { color: $fb-accent-bright; }
+.reveal strong { color: $fb-text; }
+.reveal em { color: $fb-text-2; }
+.reveal a { color: $fb-accent; text-decoration-color: $fb-accent-bright; }
+.reveal .slide h2 {
+  color: $fb-text; font-size: 1.3em; line-height: 1.15;
+  padding-bottom: .45em; margin-bottom: .8em; border-bottom: 3px solid $fb-accent-bright;
+}
+.reveal .slide h3 {
+  font-size: .9em; color: $fb-text-2; background: $fb-surface-2;
+  padding: .3em .55em; border-left: 5px solid $fb-accent-bright; margin: 0 0 .6em;
+}
+.reveal pre { box-shadow: none; border: 1px solid $fb-border; border-radius: 6px; font-size: .72em; }
+.reveal code { font-family: $fb-font-mono; }
+.reveal :not(pre) > code { background: $fb-surface-2; color: $fb-text; padding: .05em .3em; border-radius: 4px; }
+.reveal blockquote {
+  background: $fb-surface; border-left: 6px solid $fb-purple-bright;
+  box-shadow: none; padding: .5em 1em; width: auto; font-style: normal;
+}
+.reveal .slide-number, .reveal .slide-number a { color: $fb-muted; background: transparent; }
+.reveal .controls { color: $fb-accent-bright; }
+.reveal .progress { color: $fb-brand-bright; }
+.reveal .footer { color: $fb-muted; }
+
+// ── Tables ──────────────────────────────────────────────────────────────────
+.reveal table { border-collapse: collapse; font-size: .75em; }
+.reveal table th { background: $fb-surface-2; color: $fb-text; border-bottom: 2px solid $fb-accent-bright; }
+.reveal table td, .reveal table th { padding: .45em .7em; }
+.reveal table td { border-bottom: 1px solid $fb-border; }
+.reveal table tbody tr:nth-child(even) { background: $fb-surface; }
+
+// ── Title slide ─────────────────────────────────────────────────────────────
+.reveal #title-slide { text-align: left; }
+.reveal #title-slide .title { color: $fb-text; font-size: 1.9em; }
+.reveal #title-slide .subtitle { color: $fb-brand; }
+.reveal #title-slide .quarto-title-authors {
+  border-top: 8px solid $fb-brand-bright; margin-top: 1.2em; padding-top: .9em; justify-content: flex-start;
+}
+.reveal #title-slide .quarto-title-author-name { color: $fb-text-2; }
+
+// ── Layout classes (compatible with older nord-reveal.scss themes) ────────────
+.reveal .source { font-size: .55em; color: $fb-muted; margin-top: 1.2em; line-height: 1.3; }
+.reveal .source p { margin: 0; }
+.reveal .eyebrow { font-size: .65em; letter-spacing: .14em; text-transform: uppercase; color: $fb-brand; }
+.reveal .compact { font-size: .85em; }
+
+// Chapter slide: dark (Polar Night)
+.reveal .chapter-design { background: $fb-inverse-bg; color: $fb-inverse-text; padding: 1.5em 2em; box-sizing: border-box; border-radius: 6px; }
+.reveal .chapter-design h2 { color: $fb-inverse-text; border: 0; font-size: 2em; }
+.reveal .chapter-design .eyebrow { color: #{$fb-fox-badge}; }
+.reveal .chapter-design .chapter-lead { font-size: 1.1em; max-width: 30em; }
+.reveal .chapter-design .chapter-trail { color: #{$fb-blue-badge}; font-size: .8em; border-top: 1px solid #{$fb-blue-bright}; padding-top: .6em; margin-top: 2em; }
+.reveal .section-slide { text-align: center; }
+.reveal .section-slide h2 { color: $fb-accent; border: 0; font-size: 1.7em; }
+
+// Cards
+.reveal .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 1em 0; }
+.reveal .card-grid.two-cards, .reveal .two-cards .card-grid { grid-template-columns: repeat(2, 1fr); }
+.reveal .concept-card { background: $fb-surface; padding: .8em; border-top: 6px solid $fb-blue-bright; border-radius: 0 0 10px 10px; font-size: .85em; }
+.reveal .concept-card:nth-child(3n+2) { border-color: $fb-fox-bright; }
+.reveal .concept-card:nth-child(3n+3) { border-color: $fb-green-bright; }
+.reveal .concept-card strong { display: block; margin-bottom: .5em; color: $fb-text; }
+.reveal .concept-card p { margin: 0; }
+.reveal .map-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: chapter; }
+.reveal .map-item { background: $fb-surface; padding: .7em; border-left: 4px solid $fb-accent-bright; counter-increment: chapter; font-size: .82em; }
+.reveal .map-item::before { content: counter(chapter, decimal-leading-zero); color: $fb-accent; font-weight: 700; }
+.reveal .map-item p { margin: .3em 0 0; }
+
+// Highlight bands (badge background, dark text)
+.reveal .takeaway, .reveal .control-band, .reveal .scenario-intro, .reveal .note-band, .reveal .fox-band {
+  padding: .55em .8em; margin: .8em 0; border-left: 6px solid; color: $fb-text;
+}
+.reveal .takeaway      { background: mix($fb-blue-badge, $fb-bg, $fb-band-mix);   border-color: $fb-blue-bright; }
+.reveal .control-band  { background: mix($fb-green-badge, $fb-bg, $fb-band-mix);  border-color: $fb-green-bright; }
+.reveal .scenario-intro{ background: mix($fb-orange-badge, $fb-bg, $fb-band-mix); border-color: $fb-orange-bright; }
+.reveal .note-band     { background: mix($fb-yellow-badge, $fb-bg, $fb-band-mix); border-color: $fb-yellow-bright; }
+.reveal .fox-band      { background: mix($fb-fox-badge, $fb-bg, $fb-band-mix);    border-color: $fb-fox-bright; }
+.reveal .takeaway p, .reveal .control-band p, .reveal .scenario-intro p, .reveal .note-band p, .reveal .fox-band p { margin: 0; }
+.reveal .question-band { color: $fb-accent; font-size: 1.05em; font-weight: 600; }
+
+// Layers
+.reveal .layer-stack { display: grid; gap: 16px; }
+.reveal .layer-item { background: $fb-surface; border-left: 7px solid $fb-blue-bright; padding: .5em .8em; }
+.reveal .layer-item:nth-child(2) { margin-left: 30px; border-color: $fb-cyan-bright; }
+.reveal .layer-item:nth-child(3) { margin-left: 60px; border-color: $fb-green-bright; }
+.reveal .layer-item:nth-child(4) { margin-left: 90px; border-color: $fb-fox-bright; }
+.reveal .layer-item p { margin: 0; }
+
+.reveal .figure-slide img { max-height: 460px; object-fit: contain; border-radius: 5px; }
+
+// ── Color helpers: [text]{.fb-red}, [label]{.badge .fb-green} ─────────────────
+@each $name, $t, $b, $g in
+  (frost, $fb-frost, $fb-frost-bright, $fb-frost-badge),
+  (cyan, $fb-cyan, $fb-cyan-bright, $fb-cyan-badge),
+  (blue, $fb-blue, $fb-blue-bright, $fb-blue-badge),
+  (deep, $fb-deep, $fb-deep-bright, $fb-deep-badge),
+  (red, $fb-red, $fb-red-bright, $fb-red-badge),
+  (orange, $fb-orange, $fb-orange-bright, $fb-orange-badge),
+  (yellow, $fb-yellow, $fb-yellow-bright, $fb-yellow-badge),
+  (green, $fb-green, $fb-green-bright, $fb-green-badge),
+  (purple, $fb-purple, $fb-purple-bright, $fb-purple-badge),
+  (fox, $fb-fox, $fb-fox-bright, $fb-fox-badge) {
+  .reveal .fb-#{$name} { color: $t; }
+  .reveal .fb-#{$name}-mark { background: linear-gradient(transparent 60%, $g 60%); }
+  .reveal .badge.fb-#{$name} { background: $g; color: $fb-on-badge; }
+  .reveal .bar-#{$name} { border-color: $b !important; }
+}
+.reveal .badge {
+  display: inline-block; padding: .08em .5em; border-radius: 999px;
+  font-size: .75em; font-weight: 600; vertical-align: .1em;
+  background: $fb-surface-2; color: $fb-on-badge;
+}
+.reveal .muted { color: $fb-muted; }

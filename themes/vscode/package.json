@@ -1,0 +1,23 @@
+{
+  "name": "foxberry",
+  "displayName": "Foxberry",
+  "description": "A light Nord theme: Nord accents darkened by role for a light background.",
+  "version": "1.0.0",
+  "publisher": "foxberry",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Foxberry",
+        "uiTheme": "vs",
+        "path": "./themes/foxberry-color-theme.json"
+      }
+    ]
+  }
+}

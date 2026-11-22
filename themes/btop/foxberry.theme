@@ -1,0 +1,70 @@
+# Foxberry for btop.
+# Text uses accents darkened to >= 4.5:1 on #ECEFF4; boxes and graphs use the
+# bright shades (>= 2.5:1). CPU/GPU bars go cyan -> blue -> foxberry.
+# Part of Foxberry, a light Nord theme. MIT license; see LICENSE and THIRD_PARTY_NOTICES.md.
+
+theme[main_bg]="#ECEFF4"
+theme[main_fg]="#3B4252"
+
+# Titles and shortcuts
+theme[title]="#287F92"
+theme[hi_fg]="#967044"
+
+# Selection and secondary text
+theme[selected_bg]="#D8DEE9"
+theme[selected_fg]="#2E3440"
+theme[inactive_fg]="#8E97A8"
+theme[proc_misc]="#986393"
+
+# Empty parts of the bars (CPU, memory). Without this key btop uses inactive_fg,
+# which is clearly dark here; #C9D0DC is as subtle as #4C566A is in dark Nord.
+theme[meter_bg]="#C9D0DC"
+
+# Box outlines: the same accents as in Nord, in their bright shade
+theme[cpu_box]="#3B95A9"
+theme[mem_box]="#619756"
+theme[net_box]="#5E81AC"
+theme[proc_box]="#CC7248"
+theme[div_line]="#C9D0DC"
+
+# Temperature: safe -> warning -> hot
+theme[temp_start]="#619756"
+theme[temp_mid]="#AD8455"
+theme[temp_end]="#BE525A"
+
+# CPU and GPU bars and graphs (btop has no separate GPU keys) and process colors:
+# cold -> warm in Foxberry bright accents: cyan -> blue -> foxberry
+theme[cpu_start]="#3B95A9"
+theme[cpu_mid]="#658ACD"
+theme[cpu_end]="#BC7890"
+
+# Free memory / space: in dark Nord the gradient ends in white (brightest =
+# most); here it is reversed and ends in dark text
+theme[free_start]="#489784"
+theme[free_mid]="#619756"
+theme[free_end]="#3B4252"
+
+# Cache
+theme[cached_start]="#5E81AC"
+theme[cached_mid]="#B077AB"
+theme[cached_end]="#3B4252"
+
+# Available memory
+theme[available_start]="#5E81AC"
+theme[available_mid]="#5374B3"
+theme[available_end]="#287F92"
+
+# Memory / disk usage: yellow to red
+theme[used_start]="#AD8455"
+theme[used_mid]="#CC7248"
+theme[used_end]="#BE525A"
+
+# Download
+theme[download_start]="#5E81AC"
+theme[download_mid]="#5374B3"
+theme[download_end]="#287F92"
+
+# Upload
+theme[upload_start]="#B077AB"
+theme[upload_mid]="#CC7248"
+theme[upload_end]="#AD8455"
