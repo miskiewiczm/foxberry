@@ -19,6 +19,8 @@ Foxberry uses one rule instead: **the role of a color decides its shade.** Every
 | **bright** | bars, borders, git markers, charts | ≥ 2.5:1 |
 | **badge** | label backgrounds with dark `#2E3440` text | ≥ 4.5:1, the original Nord pastel |
 
+<p align="center"><img src="docs/img/palette.png" width="100%" alt="Foxberry palette: text, bright and badge versions of every accent, and the 16 ANSI colors"></p>
+
 The full specification, with every value, contrast tables and the reasoning behind each choice, is in [`docs/PALETTE.md`](docs/PALETTE.md) (Polish).
 
 ## Screenshots
