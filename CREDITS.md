@@ -16,4 +16,6 @@ Foxberry builds on the projects below. Licenses were checked on 2026-11-22 again
 
 Foxberry's own work: the Ghostty, kitty, btop, Starship, Claude Code, yatline and shell files, the Reveal.js theme and the showcase page, all built from the Nord palette.
 
+The wallpaper in `docs/img/desktop.jpg` is [Silhouette of trees covered by fog](https://unsplash.com/photos/KT3WlrL_bsg) by [Paul Pastourmatzis](https://unsplash.com/@paulpastourmatzis), used under the [Unsplash License](https://unsplash.com/license). It is not covered by Foxberry's MIT license.
+
 Fonts are not distributed with Foxberry.
