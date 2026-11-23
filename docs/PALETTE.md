@@ -1,94 +1,97 @@
-# Foxberry: specyfikacja palety
+# Foxberry: palette specification
 
-Foxberry to jasny wariant palety Nord. Dokument opisuje, jak powstał każdy kolor,
-i jest przeznaczony także dla osób oraz agentów, którzy dodają motyw do
-kolejnego programu. W tabelach kolumna „Nord” to oryginalny (ciemny) Nord,
-z którego dany kolor Foxberry pochodzi.
+Foxberry is a light variant of the Nord palette. This document explains how each
+color was derived. It is also meant for people and agents adding the theme to
+another program. In the tables, the "Nord" column is the original (dark) Nord
+color that the Foxberry color comes from.
 
-Stan: paleta w wersji 2.4 (2026-11-13). Wszystkie wartości
-są w tabelach poniżej.
+Status: palette version 2.4 (2026-11-13). All values are in the tables below.
 
-## Zasady nadrzędne
+## Core principles
 
-1. **Rola decyduje o kolorze.** Ten sam kolor Nord ma w Foxberry różne odpowiedniki
-   zależnie od tego, czy jest tekstem, tłem, czy plakietką (patrz „Mapowanie
-   Nord → Foxberry").
-2. **Kontrast na tle terminala `#E5E9F0`.** Tekst bazowy ma co najmniej 7:1.
-   Akcenty tekstowe mają około 3.8:1 (4.0:1 na `#ECEFF4`, dla którego były
-   dobierane); przy foncie terminala ok. 18 pt próg WCAG AA dla dużego tekstu
-   wynosi 3:1. Kolory „bright" (wykresy, znaczniki, paski) mają około 3.0:1.
-3. **Żółć to brąz.** Ciemna i czytelna żółć na jasnym tle zawsze wpada w brąz,
-   więc od 2.3 nord13 w Foxberry to stonowany brąz „Bronze” `#967044` (3.7:1 na
-   `#E5E9F0`) z jasnością i nasyceniem pozostałych akcentów (OKLCH L 0.57,
-   C 0.077, jak oryginalny nord13). Wcześniejsze złoto `#AE7500` (2.1–2.2) było
-   najjaśniejszym i najbardziej nasyconym akcentem i odstawało od palety.
-   Ciemny tekst na brązie ma tylko 2.3:1, więc jako tło podświetleń używaj
-   plakietki nord13 albo jasnego tekstu na brązie.
+1. **The role decides the color.** The same Nord color has different Foxberry
+   counterparts depending on whether it is text, a background or a badge (see
+   "Mapping Nord → Foxberry").
+2. **Contrast is measured on the terminal background `#E5E9F0`.** Base text is at
+   least 7:1. Text accents are about 3.8:1 (4.0:1 on `#ECEFF4`, the background
+   they were tuned on); at a terminal font size of about 18 pt, the WCAG AA
+   threshold for large text is 3:1. "Bright" colors (charts, markers, bars) are
+   about 2.8:1, above their 2.5:1 target.
+3. **Yellow becomes bronze.** A dark, readable yellow on a light background
+   always turns brown, so since 2.3 Foxberry's nord13 is a muted "Bronze"
+   `#967044` (3.7:1 on `#E5E9F0`), with the same lightness and chroma as the other
+   accents (OKLCH L 0.57, C 0.077, like the original nord13). The earlier gold
+   `#AE7500` (2.1–2.2) was the lightest and most saturated accent and stood out
+   from the palette. Dark text on bronze reaches only 2.3:1, so for highlight
+   backgrounds use the nord13 badge, or light text on bronze.
 
-## Powierzchnie i tekst
+## Surfaces and text
 
-  | Rola                                                                           | Nord                                                         | Foxberry                          |
+  | Role                                                                           | Nord                                                         | Foxberry                          |
   | ------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------- |
-  | Tło terminala (Ghostty, kitty; programy w terminalu dziedziczą je)             | `#2E3440`                                                    | `#E5E9F0`                         |
-  | Zed, VS Code: edytor i aktywna karta / panele i pasek kart / pasek tytułu, stanu (i aktywności) (od 2026-11-13) | `#2E3440` | `#EFF2F6` / `#DFE3EA` / `#D1D6E0` |
-  | Panel, sekcja C lualine, nieaktywna zakładka, zaznaczenie                      | `#3B4252` / `#434C5E`                                        | `#D8DEE9`                         |
-  | Sekcja B lualine, pasek zakładek kitty, linie, separatory, puste części pasków | `#4C566A`                                                    | `#C9D0DC`                         |
-  | Tekst podstawowy                                                               | `#BFC5D2`                                                    | `#3B4252`                         |
-  | Tekst mocny, nagłówki                                                          | `#ECEFF4`                                                    | `#2E3440`                         |
-  | Tekst przygaszony (np. sekcja C lualine, zegar w promptcie)                    | —                                                            | `#4C566A`                         |
-  | Komentarze w kodzie                                                            | `#616E88`                                                    | `#6A7488`                         |
-  | Podpowiedzi, numery linii, bardzo przygaszone                                  | `#4C566A`                                                    | `#8E97A8`                         |
-  | Kursor                                                                         | `#FF9E64` (Ghostty), `#81A1C1` (kitty)                       | `#A35E75` (foxberry)              |
-  | Tekst na zaznaczeniu                                                           | Ghostty `#4C566A` na `#ECEFF4`, kitty `#ECEFF4` na `#4C566A` | `#2E3440` na `#D8DEE9`            |
+  | Terminal background (Ghostty, kitty; terminal programs inherit it)             | `#2E3440`                                                    | `#E5E9F0`                         |
+  | Zed, VS Code: editor and active tab / panels and tab bar / title bar, status bar (and activity bar) (since 2026-11-13) | `#2E3440` | `#EFF2F6` / `#DFE3EA` / `#D1D6E0` |
+  | Panel, lualine section C, inactive tab, selection                              | `#3B4252` / `#434C5E`                                        | `#D8DEE9`                         |
+  | Lualine section B, kitty tab bar, lines, separators, empty parts of bars       | `#4C566A`                                                    | `#C9D0DC`                         |
+  | Base text                                                                      | `#BFC5D2`                                                    | `#3B4252`                         |
+  | Strong text, headings                                                          | `#ECEFF4`                                                    | `#2E3440`                         |
+  | Dimmed text (e.g. lualine section C, prompt clock)                             | —                                                            | `#4C566A`                         |
+  | Code comments                                                                  | `#616E88`                                                    | `#6A7488`                         |
+  | Hints, line numbers, very dim text                                             | `#4C566A`                                                    | `#8E97A8`                         |
+  | Cursor                                                                         | `#FF9E64` (Ghostty), `#81A1C1` (kitty)                       | `#A35E75` (foxberry)              |
+  | Text on selection                                                              | Ghostty `#4C566A` on `#ECEFF4`, kitty `#ECEFF4` on `#4C566A` | `#2E3440` on `#D8DEE9`            |
 
-**Zed i VS Code: hierarchia jak One Light / Ayu Light.** Trzy poziomy co ok. 0.045
-OKLCH L (edytor 0.960, panele 0.915, chrome 0.875), szarości w odcieniu Norda.
-Hover `#D7DDE6`, zaznaczenie `#C6CCD9`, ramki `#C8CEDA` / `#D8DDE5`, numery
-linii `#AAB1BE`, aktywny numer `#3B4252`. Akcent interfejsu (`text.accent`) to
-nord9 `#5374B3`, ramka fokusu `#A7BDD4`. Wbudowany terminal zostaje na
-`#E5E9F0`, jak Ghostty. W VS Code plakietki, przyciski i liczniki mają
-`#A7BDD4` (wcześniej nord8 `#ACD3DE`), aktywne ramki i pasek postępu `#658ACD`;
-zaznaczenie na liście jest neutralne `#C6CCD9`. 
+**Zed and VS Code: a hierarchy like One Light / Ayu Light.** Three levels about
+0.045 OKLCH L apart (editor 0.960, panels 0.915, chrome 0.875), with greys in
+Nord's hue. Hover `#D7DDE6`, selection `#C6CCD9`, borders `#C8CEDA` / `#D8DDE5`,
+line numbers `#AAB1BE`, active line number `#3B4252`. The UI accent
+(`text.accent`) is nord9 `#5374B3`, the focus border `#A7BDD4`. The integrated
+terminal stays on `#E5E9F0`, like Ghostty. In VS Code, badges, buttons and
+counters use `#A7BDD4` (previously nord8 `#ACD3DE`), active borders and the
+progress bar use `#658ACD`, and list selection is a neutral `#C6CCD9`.
 
-## Akcenty
+## Accents
 
-Kolumna „tekst" zawiera kolory tekstu i ikon na tle głównym. Kolumna „bright"
-zawiera kolory wykresów, znaczników i ANSI 9--15. Kolumna „plakietka" zawiera
-tło etykiet z ciemnym tekstem `#2E3440`, na przykład segmentów prompta, trybów
-lualine i aktywnych pól.
+The "text" column holds colors for text and icons on the main background. The
+"bright" column holds colors for charts, markers and ANSI 9–15. The "badge"
+column holds label backgrounds with dark `#2E3440` text, such as prompt segments,
+lualine modes and active fields.
 
-  | Nord   | Rola typowa                | Nord      | tekst       | bright       | plakietka       |
-  | ------ | -------------------------- | --------- | ----------- | ------------ | --------------- |
-  | nord7  | typy, klasy                | `#8FBCBB` | `#36816F`   | `#489784`    | `#B6D3D2`       |
-  | nord8  | funkcje, katalogi          | `#88C0D0` | `#287F92`   | `#3B95A9`    | `#ACD3DE`       |
-  | nord9  | słowa kluczowe, operatory  | `#81A1C1` | `#5374B3`   | `#658ACD`    | `#A7BDD4`       |
-  | nord10 | linki, akcent głęboki      | `#5E81AC` | `#3F79A8`   | `#5E81AC`    | `#96ADC9`       |
-  | nord11 | błędy, usunięte            | `#BF616A` | `#BE525A`   | `#DA656D`    | `#D5989E`       |
-  | nord12 | liczby, adnotacje          | `#D08770` | `#B15E37`   | `#CC7248`    | `#DEAB9B`       |
-  | nord13 | ostrzeżenia, zmodyfikowane | `#EBCB8B` | `#967044`   | `#AD8455`    | `#E5C4A1`       |
-  | nord14 | stringi, dodane, sukces    | `#A3BE8C` | `#4E8044`   | `#619756`    | `#AAC396`       |
-  | nord15 | stałe, liczby, specjalne   | `#B48EAD` | `#986393`   | `#B077AB`    | `#CAB0C6`       |
-  | foxberry | tryb visual (lualine)    | `#C68B9D` | `#A35E75`   | `#BC7890`    | `#DEC0CC`       |
+  | Accent   | Typical role               | Nord      | text        | bright       | badge           |
+  | -------- | -------------------------- | --------- | ----------- | ------------ | --------------- |
+  | nord7    | types, classes             | `#8FBCBB` | `#36816F`   | `#489784`    | `#B6D3D2`       |
+  | nord8    | functions, directories     | `#88C0D0` | `#287F92`   | `#3B95A9`    | `#ACD3DE`       |
+  | nord9    | keywords, operators        | `#81A1C1` | `#5374B3`   | `#658ACD`    | `#A7BDD4`       |
+  | nord10   | links, deep accent         | `#5E81AC` | `#3F79A8`   | `#5E81AC`    | `#96ADC9`       |
+  | nord11   | errors, deletions          | `#BF616A` | `#BE525A`   | `#DA656D`    | `#D5989E`       |
+  | nord12   | numbers, annotations       | `#D08770` | `#B15E37`   | `#CC7248`    | `#DEAB9B`       |
+  | nord13   | warnings, modified         | `#EBCB8B` | `#967044`   | `#AD8455`    | `#E5C4A1`       |
+  | nord14   | strings, additions, success | `#A3BE8C` | `#4E8044`  | `#619756`    | `#AAC396`       |
+  | nord15   | constants, numbers, specials | `#B48EAD` | `#986393` | `#B077AB`    | `#CAB0C6`       |
+  | foxberry | cursor, visual mode (lualine) | `#C68B9D` | `#A35E75` | `#BC7890`    | `#DEC0CC`       |
 
-**foxberry** (od 2026-11-12) to akcent spoza Nordu: przygaszony róż, który leży
-między nord11 a nord15. W OKLCH ma H ≈ 359° (nord11 18°, nord15 330°) i tę
-samą jasność co reszta akcentów (L ≈ 0.57). Kontrast na `#E5E9F0`: tekst
-3.9:1, bright 2.8:1 (tyle co nord15 bright). Plakietka z tekstem `#2E3440`
-ma 7.4:1. Kolor bazowy `#C68B9D` (do ciemnego tła) ma ten sam odcień, jasność nord12/nord15
-(L ≈ 0.70) i kontrast 4.5:1 na `#2E3440`.
-Pierwsza rola (2026-11-13): plakietka trybu visual w lualine. Od 2026-11-22
-także kursor (terminal, Zed, VS Code, bat, yazi): `#A35E75` ma 3.9:1 na tle
-terminala, a jasny znak pod kursorem `#ECEFF4` ma na nim 4.1:1.
-W lualine insert ma ciemną plakietkę `#4C566A` z tekstem `#ECEFF4`
-(odbicie białej plakietki nord4 z ciemnego Norda).
+**foxberry** (since 2026-11-12) is the one accent from outside Nord: a muted pink
+between nord11 and nord15. In OKLCH its hue is H ≈ 359° (nord11 18°, nord15 330°),
+with the same lightness as the other accents (L ≈ 0.57). Contrast on `#E5E9F0`:
+text 3.9:1, bright 2.8:1 (the same as nord15 bright). The badge with `#2E3440`
+text reaches 7.4:1. The base color `#C68B9D` (for dark backgrounds) has the same
+hue, the lightness of nord12/nord15 (L ≈ 0.70) and 4.5:1 contrast on `#2E3440`.
 
-Polecenia w zsh (fast-syntax-highlighting) mają w ciemnym motywie kolor
-`#77C2D2`, a w Foxberry `#068092`.
+Its first role (2026-11-13) was the visual mode badge in lualine. Since 2026-11-22
+it is also the cursor (terminal, Zed, VS Code, bat, yazi): `#A35E75` has 3.9:1 on
+the terminal background, and a light `#ECEFF4` character under the cursor has
+4.1:1 on it.
 
-## Paleta ANSI terminala
+In lualine, insert mode has a dark `#4C566A` badge with `#ECEFF4` text (the mirror
+image of dark Nord's white nord4 badge).
 
-Ghostty (`themes/ghostty/Foxberry`) i kitty (`themes/kitty/foxberry.conf`)
-mają identyczne wartości. Kolumna „Nord” to motyw Nord dla Ghostty.
+Commands in zsh (fast-syntax-highlighting) are `#77C2D2` in the dark theme and
+`#068092` in Foxberry.
+
+## Terminal ANSI palette
+
+Ghostty (`themes/ghostty/Foxberry`) and kitty (`themes/kitty/foxberry.conf`) use
+identical values. The "Nord" column is the Nord theme for Ghostty.
 
   | ANSI      | Nord      | Foxberry  | ANSI              | Nord                        | Foxberry  |
   | --------- | --------- | --------- | ----------------- | --------------------------- | --------- |
@@ -101,60 +104,61 @@ mają identyczne wartości. Kolumna „Nord” to motyw Nord dla Ghostty.
   | 6 cyan    | `#88C0D0` | `#287F92` | 14 bright cyan    | `#8FBCBB`                   | `#489784` |
   | 7 white   | `#E5E9F0` | `#6A7488` | 15 bright white   | `#ECEFF4`                   | `#8E97A8` |
 
-**Kolory bright w Nord.** W Nordzie ANSI 9–13 są identyczne z 1–5, a slot
-cyjanu jest wyjątkiem: ANSI 6 to nord8, ANSI 14 to inny Frost, nord7. Foxberry
-musi rozjaśnić bright (na jasnym tle identyczne kolory nie dałyby różnicy),
-ale zasada brzmi: bright = jaśniejsza wersja koloru, który ten slot ma w Nordzie.
-Dlatego ANSI 14 w Foxberry to jasny nord7 `#489784`, nie jasny nord8. Wersja 2.3
-miała tu `#3B95A9` (jasny nord8) i 2.4 to cofnęła. Bliskość 14 i 10 (ΔE 0.064)
-jest cechą Norda: w oryginale nord7 i nord14 dzieli ΔE 0.069.
+**Bright colors in Nord.** In Nord, ANSI 9–13 are identical to 1–5, and the cyan
+slot is the exception: ANSI 6 is nord8, while ANSI 14 is a different Frost color,
+nord7. Foxberry has to lighten the bright colors (identical colors would show no
+difference on a light background), but the rule is: bright = a lighter version of
+the color that slot has in Nord. That is why Foxberry's ANSI 14 is a light nord7
+`#489784`, not a light nord8. Version 2.3 used `#3B95A9` (light nord8) here and
+2.4 reverted it. The closeness of 14 and 10 (ΔE 0.064) is a trait of Nord itself:
+in the original, nord7 and nord14 are ΔE 0.069 apart.
 
-**ANSI 4 to nord9, nie nord10.** Tak mapuje Nord (nord10 ma w oryginale tylko
-3.1:1). W Foxberry oba mają 3.8:1, ale nord10 jest bliżej cyjanu (ΔE do ANSI 6:
-0.047 zamiast 0.079).
+**ANSI 4 is nord9, not nord10.** This is how Nord maps it (nord10 has only 3.1:1
+in the original). In Foxberry both have 3.8:1, but nord10 is closer to cyan (ΔE to
+ANSI 6: 0.047 instead of 0.079).
 
-Programy, które rysują nazwanymi kolorami ANSI (`yellow`, `white`, `darkgray`),
-dostają w Foxberry ciemne odcienie. Połączenia typu „white na darkgray" albo „black
-na yellow" robią się wtedy ciemne na ciemnym. W motywie Foxberry takie miejsca
-trzeba nadpisać kolorami hex (przykład: własny pasek
-w `init.lua` yazi).
+Programs that draw with named ANSI colors (`yellow`, `white`, `darkgray`) get dark
+shades in Foxberry. Combinations like "white on darkgray" or "black on yellow"
+then become dark on dark. In a Foxberry theme, such places must be overridden with
+hex colors (example: a custom bar in yazi's `init.lua`).
 
-## Mapowanie Nord → Foxberry
+## Mapping Nord → Foxberry
 
-Gdy program ma już motyw Nord (ciemny), motyw Foxberry powstaje przez przekształcenie
-każdego koloru według jego roli.
+When a program already has a (dark) Nord theme, the Foxberry theme is created by
+transforming each color according to its role.
 
-- **Akcent jako tekst lub ikona** → kolumna „tekst".
-- **Akcent jako tło plakietki z ciemnym tekstem** → pastelowy oryginał Nord
-  zostaje albo przechodzi w kolumnę „plakietka"; tekst na nim to `#2E3440`.
-- **Akcent jako wykres, pasek lub obramowanie** → kolumna „bright".
-- **Powierzchnie Polar Night** (`#2E3440`, `#3B4252`, `#434C5E`, `#4C566A`) jako
-  tło → Snow Storm według tabeli powierzchni.
-- **Snow Storm jako tekst** (`#D8DEE9`, `#E5E9F0`, `#ECEFF4`) → `#3B4252` lub
+- **Accent as text or icon** → the "text" column.
+- **Accent as a badge background with dark text** → the original Nord pastel stays
+  or moves to the "badge" column; the text on it is `#2E3440`.
+- **Accent as a chart, bar or border** → the "bright" column.
+- **Polar Night surfaces** (`#2E3440`, `#3B4252`, `#434C5E`, `#4C566A`) as
+  backgrounds → Snow Storm, according to the surfaces table.
+- **Snow Storm as text** (`#D8DEE9`, `#E5E9F0`, `#ECEFF4`) → `#3B4252` or
   `#2E3440`.
-- **Polar Night jako tekst** (separatory, prowadnice) → `#C9D0DC`; przygaszone →
+- **Polar Night as text** (separators, indent guides) → `#C9D0DC`; dimmed →
   `#8E97A8`.
-- **Drabina szarości:** każdy panel ma być co najmniej o stopień (`#E5E9F0` →
-  `#D8DEE9` → `#C9D0DC`) ciemniejszy od tła, na którym leży. Panel w kolorze tła
-  znika.
-- **Gradacja chrome:** w ciemnym Nordzie titlebar jest najjaśniejszy, a edytor
-  najciemniejszy. W Foxberry odwrotnie: titlebar i karty `#D8DEE9`, panele
-  `#DFE3EB`, edytor i aktywna karta `#E5E9F0`.
-- **Kolory półprzezroczyste** (np. tła diagnostyki) mieszamy z `#ECEFF4`, a nie
-  z `#2E3440`.
+- **Grey ladder:** every panel must be at least one step (`#E5E9F0` → `#D8DEE9` →
+  `#C9D0DC`) darker than the background it sits on. A panel in the background
+  color disappears.
+- **Chrome gradation:** in dark Nord the title bar is the lightest and the editor
+  the darkest. In Foxberry it is the reverse: title bar and tabs `#D8DEE9`, panels
+  `#DFE3EB`, editor and active tab `#E5E9F0`. Zed and VS Code use the three-level
+  hierarchy described above.
+- **Semi-transparent colors** (e.g. diagnostic backgrounds) are blended with
+  `#ECEFF4`, not with `#2E3440`.
 
-## Gdzie co leży
+## Where things are
 
-Gotowe pliki są w `themes/` (instalacja w `README.md`), motyw slajdów w `reveal/`,
-a strona poglądowa w `site/`.
+Ready-to-use files are in `themes/` (installation in `README.md`), the slide theme
+is in `reveal/`, and the showcase page is in `site/`.
 
-## Wersje
+## Versions
 
-  | Wersja        | Różnica                                                                                         |
+  | Version       | Difference                                                                                      |
   | ------------- | ----------------------------------------------------------------------------------------------- |
-  | 1.0           | akcenty 4.5:1, odcienie 1:1 z Nordem; ciemna, typy, funkcje i słowa kluczowe prawie się zlewają |
-  | 2.0           | akcenty ~4.0:1, odcienie rozsunięte w OKLCH                                                     |
-  | 2.1           | jak 2.0, żółć `#AE7500` / `#C68A12` zamiast `#976D16` / `#AF822A`                               |
-  | 2.2           | jak 2.1, tło terminala szare `#E5E9F0` zamiast `#ECEFF4`; panele i paski o stopień ciemniej     |
-  | 2.3           | jak 2.2, żółć Bronze `#967044` / `#AD8455` / plakietka `#E5C4A1`; ANSI 14 `#3B95A9` (nord8 bright) zamiast `#489784` |
-  | 2.4 (bieżąca) | jak 2.3, ale ANSI 14 z powrotem `#489784` (jasny nord7, zgodnie z Nordem); Zed też `#489784` |
+  | 1.0           | accents 4.5:1, hues 1:1 with Nord; dark, with types, functions and keywords nearly blending together |
+  | 2.0           | accents ~4.0:1, hues spread apart in OKLCH                                                      |
+  | 2.1           | as 2.0, yellow `#AE7500` / `#C68A12` instead of `#976D16` / `#AF822A`                           |
+  | 2.2           | as 2.1, grey terminal background `#E5E9F0` instead of `#ECEFF4`; panels and bars one step darker |
+  | 2.3           | as 2.2, Bronze yellow `#967044` / `#AD8455` / badge `#E5C4A1`; ANSI 14 `#3B95A9` (nord8 bright) instead of `#489784` |
+  | 2.4 (current) | as 2.3, but ANSI 14 back to `#489784` (light nord7, following Nord); Zed also `#489784`         |

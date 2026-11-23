@@ -21,7 +21,7 @@ Foxberry uses one rule instead: **the role of a color decides its shade.** Every
 
 <p align="center"><img src="docs/img/palette.png" width="100%" alt="Foxberry palette: text, bright and badge versions of every accent, and the 16 ANSI colors"></p>
 
-The full specification, with every value, contrast tables and the reasoning behind each choice, is in [`docs/PALETTE.md`](docs/PALETTE.md) (Polish).
+The full specification, with every value, contrast tables and the reasoning behind each choice, is in [`docs/PALETTE.md`](docs/PALETTE.md).
 
 ## Screenshots
 
