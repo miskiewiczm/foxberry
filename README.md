@@ -90,6 +90,26 @@ Copy `themes/neovim/lua/` into `~/.config/nvim/lua/`. With lazy.nvim:
 Foxberry is applied when `background` is `light`, which Neovim sets from the terminal.
 </details>
 
+<details><summary><b>Vim</b></summary>
+
+```sh
+mkdir -p ~/.vim/colors
+cp themes/vim/colors/foxberry.vim ~/.vim/colors/
+```
+
+In `~/.vimrc`:
+
+```vim
+set termguicolors
+set background=light
+colorscheme foxberry
+```
+
+- Set `termguicolors` before `colorscheme` (if you toggle it later, run `:colorscheme foxberry` again).
+- Without `termguicolors`, Vim falls back to the terminal's ANSI palette, so use a terminal with the Foxberry colors.
+
+</details>
+
 <details><summary><b>bat</b></summary>
 
 ```sh

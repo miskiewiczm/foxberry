@@ -14,7 +14,7 @@ Foxberry builds on the projects below. Licenses were checked on 2026-11-22 again
 | `themes/neovim/` | add-on for [nord.nvim](https://github.com/gbprod/nord.nvim) (required, not included) | gbprod | WTFPL |
 | `themes/fast-syntax-highlighting/` | styles for [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) (required, not included) | zdharma-continuum | BSD-3-Clause |
 
-Foxberry's own work: the Ghostty, kitty, btop, Starship, Claude Code, yatline and shell files, the Reveal.js theme and the showcase page, all built from the Nord palette.
+Foxberry's own work: the Ghostty, kitty, Vim, btop, Starship, Claude Code, yatline and shell files, the Reveal.js theme and the showcase page, all built from the Nord palette.
 
 The wallpaper in `docs/img/desktop.jpg` is [Silhouette of trees covered by fog](https://unsplash.com/photos/KT3WlrL_bsg) by [Paul Pastourmatzis](https://unsplash.com/@paulpastourmatzis), used under the [Unsplash License](https://unsplash.com/license). It is not covered by Foxberry's MIT license.
 
