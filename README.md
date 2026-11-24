@@ -105,7 +105,8 @@ set background=light
 colorscheme foxberry
 ```
 
-Without `termguicolors`, Vim falls back to the terminal's ANSI palette, so use a terminal with the Foxberry colors.
+- Set `termguicolors` before `colorscheme` (if you toggle it later, run `:colorscheme foxberry` again).
+- Without `termguicolors`, Vim falls back to the terminal's ANSI palette, so use a terminal with the Foxberry colors.
 
 </details>
 
