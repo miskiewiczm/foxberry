@@ -13,11 +13,11 @@ Nord has no official light variant. Most community attempts either flip the back
 
 Foxberry uses one rule instead: **the role of a color decides its shade.** Every accent comes in three versions:
 
-| Role | Used for | Target on the background |
-|---|---|---|
-| **text** | words, icons and syntax | ≥ 3:1, darkened Nord accent |
-| **bright** | bars, borders, git markers, charts | ≥ 2.5:1 |
-| **badge** | label backgrounds with dark `#2E3440` text | ≥ 4.5:1, the original Nord pastel |
+| Role       | Used for                                   | Target on the background          |
+|------------|--------------------------------------------|-----------------------------------|
+| **text**   | words, icons and syntax                    | ≥ 3:1, darkened Nord accent       |
+| **bright** | bars, borders, git markers, charts         | ≥ 2.5:1                           |
+| **badge**  | label backgrounds with dark `#2E3440` text | ≥ 4.5:1, the original Nord pastel |
 
 <p align="center"><img src="docs/img/palette.png" width="100%" alt="Foxberry palette: text, bright and badge versions of every accent, and the 16 ANSI colors"></p>
 
@@ -27,10 +27,10 @@ The full specification, with every value, contrast tables and the reasoning behi
 
 <p align="center"><img src="docs/img/desktop.jpg" width="100%" alt="Foxberry on a desktop: yazi and btop in kitty, with Zed"></p>
 
-| | |
-|---|---|
-| <img src="docs/img/neovim.png" alt="Neovim with lualine"><br>**Neovim** · lualine | <img src="docs/img/bat.png" alt="bat"><br>**bat** |
-| <img src="docs/img/zed.png" alt="Zed"><br>**Zed** | <img src="docs/img/vscode.png" alt="VS Code"><br>**VS Code** |
+|                                                                                                              |                                                                             |
+|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| <img src="docs/img/neovim.png" alt="Neovim with lualine"><br>**Neovim** · lualine                            | <img src="docs/img/bat.png" alt="bat"><br>**bat**                           |
+| <img src="docs/img/zed.png" alt="Zed"><br>**Zed**                                                            | <img src="docs/img/vscode.png" alt="VS Code"><br>**VS Code**                |
 | <img src="docs/img/terminal.png" alt="kitty with the Starship prompt and eza"><br>**kitty** · Starship · eza | <img src="docs/img/yazi.png" alt="yazi with yatline"><br>**yazi** · yatline |
 
 Terminal screenshots are taken in kitty. Font: JetBrains Mono.
