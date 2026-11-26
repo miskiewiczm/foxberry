@@ -88,6 +88,7 @@ Copy `themes/neovim/lua/` into `~/.config/nvim/lua/`. With lazy.nvim:
 { "nvim-lualine/lualine.nvim", opts = { options = { theme = "foxberry" } } },
 ```
 Foxberry is applied when `background` is `light`, which Neovim sets from the terminal.
+For darker syntax colors (5:1) at small font sizes, set `vim.g.foxberry_contrast = true` before the color scheme loads (see [Contrast variant](docs/PALETTE.md#contrast-variant-for-editors)).
 </details>
 
 <details><summary><b>Vim</b></summary>

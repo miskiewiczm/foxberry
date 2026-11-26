@@ -92,7 +92,7 @@ Commands in zsh (fast-syntax-highlighting) are `#77C2D2` in the dark theme and
 
 Text accents are tuned for a terminal at about 18 pt. In an editor most of the
 code is colored and the font is usually smaller (12–14 pt), so VS Code and Zed
-also ship **Foxberry Contrast**: the same theme with only the syntax colors
+also ship **Foxberry Contrast** (in Neovim: `vim.g.foxberry_contrast = true`): the same theme with only the syntax colors
 darkened to 5:1 on the editor background `#EFF2F6`, above the WCAG AA 4.5:1 for normal text.
 Hue and OKLCH chroma stay; only lightness drops. The UI, the integrated terminal,
 git markers, bright and badge colors are identical in both variants.

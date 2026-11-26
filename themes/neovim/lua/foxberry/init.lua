@@ -27,6 +27,20 @@ M.FG = {
   ["#2E3440"] = "#ECEFF4", -- text in the background color (e.g. ~ past the end of the buffer)
 }
 
+-- Contrast variant: the same hue and OKLCH chroma, lightness lowered to 5:1 on #EFF2F6
+M.CONTRAST = {
+  ["#36816F"] = "#277362", -- nord7
+  ["#287F92"] = "#147184", -- nord8
+  ["#5374B3"] = "#4667A4", -- nord9
+  ["#3F79A8"] = "#316B9A", -- nord10
+  ["#BE525A"] = "#AE444D", -- nord11
+  ["#B15E37"] = "#A25029", -- nord12
+  ["#967044"] = "#866035", -- nord13
+  ["#4E8044"] = "#417338", -- nord14
+  ["#986393"] = "#895685", -- nord15
+  ["#6A7488"] = "#5E677B", -- comments
+}
+
 M.BG = {
   ["#2E3440"] = "#ECEFF4",
   ["#3B4252"] = "#E5E9F0",
@@ -53,12 +67,22 @@ function M.is_light()
   return vim.o.background == "light"
 end
 
+-- Light text color for a Nord color, with the contrast variant applied when enabled
+local function text(c)
+  local t = M.FG[c] or c
+  if vim.g.foxberry_contrast then
+    return M.CONTRAST[t] or t
+  end
+  return t
+end
+
 -- Text color for the current background (for your own highlight groups)
 function M.fg(c)
   if not M.is_light() then
     return c
   end
-  return M.FG[norm(c)] or c
+  local n = norm(c)
+  return n and text(n) or c
 end
 
 local function convert(hl)
@@ -73,14 +97,14 @@ local function convert(hl)
       out.fg = M.BG[fg] or fg
     end
     if bg then
-      out.bg = POLAR[bg] and BADGE_FG or (M.FG[bg] or bg)
+      out.bg = POLAR[bg] and BADGE_FG or text(bg)
     elseif fg and ACCENTS[fg] then
       -- without bg the text becomes the terminal background, i.e. light on pastel
       out.bg = BADGE_FG
     end
   else
     if fg then
-      out.fg = (bg and ACCENTS[bg] and POLAR[fg]) and BADGE_FG or (M.FG[fg] or fg)
+      out.fg = (bg and ACCENTS[bg] and POLAR[fg]) and BADGE_FG or text(fg)
     end
     if bg then
       out.bg = M.BG[bg] or bg
@@ -88,7 +112,7 @@ local function convert(hl)
   end
   local sp = norm(hl.sp)
   if sp then
-    out.sp = M.FG[sp] or sp
+    out.sp = text(sp)
   end
   return out
 end
