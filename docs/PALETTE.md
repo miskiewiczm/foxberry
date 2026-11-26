@@ -118,6 +118,8 @@ the Nord character disappears.
 
 Ratios are on `#EFF2F6`. Use Foxberry at large font sizes and Contrast at small ones.
 
+![Foxberry and Foxberry Contrast side by side in VS Code](img/contrast.png)
+
 ## Terminal ANSI palette
 
 Ghostty (`themes/ghostty/Foxberry`) and kitty (`themes/kitty/foxberry.conf`) use
@@ -191,4 +193,5 @@ is in `reveal/`, and the showcase page is in `site/`.
   | 2.1           | as 2.0, yellow `#AE7500` / `#C68A12` instead of `#976D16` / `#AF822A`                           |
   | 2.2           | as 2.1, grey terminal background `#E5E9F0` instead of `#ECEFF4`; panels and bars one step darker |
   | 2.3           | as 2.2, Bronze yellow `#967044` / `#AD8455` / badge `#E5C4A1`; ANSI 14 `#3B95A9` (nord8 bright) instead of `#489784` |
-  | 2.4 (current) | as 2.3, but ANSI 14 back to `#489784` (light nord7, following Nord); Zed also `#489784`         |
+  | 2.4           | as 2.3, but ANSI 14 back to `#489784` (light nord7, following Nord); Zed also `#489784`         |
+  | 2.5 (current) | as 2.4, plus Foxberry Contrast for VS Code, Zed and Neovim: syntax colors at 5:1              |

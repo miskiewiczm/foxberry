@@ -23,6 +23,8 @@ Foxberry uses one rule instead: **the role of a color decides its shade.** Every
 
 The full specification, with every value, contrast tables and the reasoning behind each choice, is in [`docs/PALETTE.md`](docs/PALETTE.md).
 
+For editors at small font sizes, VS Code, Zed and Neovim also have **Foxberry Contrast**, with syntax colors darkened to 5:1 ([comparison](docs/img/contrast.png), [details](docs/PALETTE.md#contrast-variant-for-editors)).
+
 ## Screenshots
 
 <p align="center"><img src="docs/img/desktop.jpg" width="100%" alt="Foxberry on a desktop: yazi and btop in kitty, with Zed"></p>
