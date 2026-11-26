@@ -70,7 +70,8 @@ end
 -- Light text color for a Nord color, with the contrast variant applied when enabled
 local function text(c)
   local t = M.FG[c] or c
-  if vim.g.foxberry_contrast then
+  local on = vim.g.foxberry_contrast
+  if on and on ~= 0 then -- 0 from Vimscript (:let g:foxberry_contrast = 0) means off
     return M.CONTRAST[t] or t
   end
   return t
