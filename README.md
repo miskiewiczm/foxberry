@@ -62,7 +62,7 @@ In `kitty.conf`: `include foxberry.conf`
 ```sh
 cp themes/zed/foxberry.json ~/.config/zed/themes/
 ```
-In `settings.json`: `"theme": "Foxberry"`
+In `settings.json`: `"theme": "Foxberry"`, or `"Foxberry Contrast"` for darker syntax colors at small font sizes (see [Contrast variant](docs/PALETTE.md#contrast-variant-for-editors)).
 </details>
 
 <details><summary><b>VS Code</b></summary>
@@ -70,7 +70,7 @@ In `settings.json`: `"theme": "Foxberry"`
 ```sh
 cp -r themes/vscode ~/.vscode/extensions/foxberry
 ```
-Restart VS Code and pick **Foxberry** in *Preferences: Color Theme*.
+Restart VS Code and pick **Foxberry** in *Preferences: Color Theme*. **Foxberry Contrast** has darker syntax colors (5:1) for small editor fonts; see [Contrast variant](docs/PALETTE.md#contrast-variant-for-editors).
 </details>
 
 <details><summary><b>Neovim</b> (with <a href="https://github.com/gbprod/nord.nvim">nord.nvim</a> and lualine)</summary>

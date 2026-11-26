@@ -88,6 +88,36 @@ image of dark Nord's white nord4 badge).
 Commands in zsh (fast-syntax-highlighting) are `#77C2D2` in the dark theme and
 `#068092` in Foxberry.
 
+## Contrast variant for editors
+
+Text accents are tuned for a terminal at about 18 pt. In an editor most of the
+code is colored and the font is usually smaller (12–14 pt), so VS Code and Zed
+also ship **Foxberry Contrast**: the same theme with only the syntax colors
+darkened to 5:1 on the editor background `#EFF2F6`, above the WCAG AA 4.5:1 for normal text.
+Hue and OKLCH chroma stay; only lightness drops. The UI, the integrated terminal,
+git markers, bright and badge colors are identical in both variants.
+
+Unlike version 1.0 (4.5:1), the hues stay spread apart as in 2.0, so types,
+functions and keywords remain distinct. 5:1 is the upper limit: at 5.5:1 the
+accents start to blend into each other, and at 7:1 they turn dark and muddy and
+the Nord character disappears.
+
+| Role                   | Foxberry  | Ratio | Contrast  | Ratio |
+| ---------------------- | --------- | ----- | --------- | ----- |
+| keywords (nord9)       | `#5374B3` | 4.14  | `#4667A4` | 5.01  |
+| types, classes (nord7) | `#36816F` | 4.13  | `#277362` | 5.03  |
+| functions (nord8)      | `#287F92` | 4.12  | `#147184` | 5.02  |
+| preprocessor (nord10)  | `#3F79A8` | 4.15  | `#316B9A` | 5.05  |
+| errors (nord11)        | `#BE525A` | 4.12  | `#AE444D` | 5.01  |
+| decorators (nord12)    | `#B15E37` | 4.13  | `#A25029` | 5.03  |
+| escapes, regex (nord13)| `#967044` | 3.98  | `#866035` | 5.00  |
+| strings (nord14)       | `#4E8044` | 4.16  | `#417338` | 5.01  |
+| numbers (nord15)       | `#986393` | 4.12  | `#895685` | 5.01  |
+| foxberry               | `#A35E75` | 4.24  | `#965369` | 5.00  |
+| comments               | `#6A7488` | 4.19  | `#5E677B` | 5.05  |
+
+Ratios are on `#EFF2F6`. Use Foxberry at large font sizes and Contrast at small ones.
+
 ## Terminal ANSI palette
 
 Ghostty (`themes/ghostty/Foxberry`) and kitty (`themes/kitty/foxberry.conf`) use

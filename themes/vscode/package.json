@@ -17,6 +17,11 @@
         "label": "Foxberry",
         "uiTheme": "vs",
         "path": "./themes/foxberry-color-theme.json"
+      },
+      {
+        "label": "Foxberry Contrast",
+        "uiTheme": "vs",
+        "path": "./themes/foxberry-contrast-color-theme.json"
       }
     ]
   }
