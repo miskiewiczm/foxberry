@@ -3,7 +3,8 @@
 <h1 align="center">Foxberry</h1>
 
 <p align="center">A light <a href="https://www.nordtheme.com">Nord</a> theme, consistent across the terminal, editors, prompt and slides.<br>
-Nord's accents, darkened by role for a light background, plus one accent from outside Nord: the muted pink <b>foxberry</b>.</p>
+Nord's accents, darkened by role for a light background, plus one accent from outside Nord: the muted pink <b>foxberry</b>.<br>
+<i>The deeper meaning of the foxberry color shall remain a secret.</i></p>
 
 <p align="center"><img src="docs/img/showcase.png" width="100%" alt="Foxberry showcase: terminal, Zed and Neovim"></p>
 
