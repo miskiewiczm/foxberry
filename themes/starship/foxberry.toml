@@ -14,12 +14,10 @@ palette = 'foxberry'
 
 format = """
 [ ⌘ ](bg:os_bg fg:os_fg)\
-[](bg:dir_bg fg:os_bg)\
 $directory\
-[](fg:dir_bg bg:git_bg)\
 $git_branch\
 $git_status\
-[](fg:git_bg bg:lang_bg)\
+[ ](bg:git_bg)\
 $nodejs\
 $bun\
 $rust\
@@ -27,7 +25,7 @@ $golang\
 $php\
 $python\
 $conda\
-[](fg:lang_bg)\
+[▌](fg:lang_bg)\
 $fill\
 ${custom.clock}\
 \n $character"""
